@@ -1,19 +1,22 @@
 <template>
   <div class="message">
     <div class="message__avatar">
-      <img :src="message.user.image">
+      <img :src="message.user.image" />
     </div>
     <div class="message__contents">
-      <div class="message__info">{{message.user.name}} <small>{{new Date(message.createdAt).toLocaleString()}}</small></div>
-      <div class="message__text">{{message.text}}</div>
+      <div class="message__info">
+        {{ message.user.github_username }}
+        <small>{{ new Date(message.createdAt).toLocaleString() }}</small>
+      </div>
+      <div class="message__text">{{ message.text }}</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['message'],
-};
+  props: ['message']
+}
 </script>
 
 <style lang="scss">
