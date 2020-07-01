@@ -28,7 +28,7 @@ export default {
     loginWithGithub({ state }) {
       state.loading = true;
       async function receiveMessage(event) {
-        if (event.origin !== "http://localhost:3030") {
+        if (event.origin !== 'http://localhost:3030') {
           console.log('invalid origin', event.origin);
         } else {
           const user = await feathers.authenticate({

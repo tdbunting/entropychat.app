@@ -11,35 +11,35 @@
 </template>
 
 <script>
-import { watch } from "@vue/composition-api";
-import { useState, useActions, useRouter } from "@u3u/vue-hooks";
+import { watch } from '@vue/composition-api';
+import { useState, useActions, useRouter } from '@u3u/vue-hooks';
 // import Button from '@/components/Button.vue';
 // import Loading from '@/components/Loading.vue';
-import Navbar from "@/components/Navbar.vue";
-import ChatBox from "@/components/ChatBox.vue";
-import Message from "@/components/Message.vue";
+import Navbar from '@/components/Navbar.vue';
+import ChatBox from '@/components/ChatBox.vue';
+import Message from '@/components/Message.vue';
 
 export default {
-  name: "Messages",
+  name: 'Messages',
   components: {
     Navbar,
     ChatBox,
-    Message
+    Message,
   },
   setup() {
     const { router } = useRouter();
 
-    const { user } = useState("auth", ["user"]);
+    const { user } = useState('auth', ['user']);
 
-    const { loading, messages } = useState("messages", ["messages", "loading"]);
+    const { loading, messages } = useState('messages', ['messages', 'loading']);
 
-    const { logout } = useActions("auth", ["logout"]);
+    const { logout } = useActions('auth', ['logout']);
 
-    const { listen } = useActions("messages", ["listen"]);
+    const { listen } = useActions('messages', ['listen']);
 
     watch(user, () => {
       if (!user.value) {
-        router.push("/");
+        router.push('/');
       }
     });
 
@@ -49,9 +49,9 @@ export default {
       user,
       logout,
       loading,
-      messages
+      messages,
     };
-  }
+  },
 };
 </script>
 

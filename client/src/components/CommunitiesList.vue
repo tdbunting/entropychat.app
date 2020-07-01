@@ -1,42 +1,42 @@
 <template>
   <div class="communities">
     <div class="community--icon">
-      <span><i class="fa fa-home"></i></span>
-    </div>
-    <div class="community--seperator"></div>
-    <div class="community--icon">
-      <span>CG</span>
-    </div>
-    <div class="community--icon">
-      <span>CG</span>
-    </div>
-    <div class="community--icon">
-      <span>CG</span>
-    </div>
-    <div class="community--seperator"></div>
-    <div class="community--icon">
-      <span><i class="fa fa-plus"></i></span>
+      <span>
+        <i class="fa fa-home"></i>
+      </span>
     </div>
 
-    <button class="signout--button" @click="logout()">
-      <i class="fa fa-sign-out"></i>
-    </button>
+    <div v-if="communities.length > 1" class="community--seperator"></div>
+
+    <div v-for="community in communities" :key="community._id">
+      <img
+        class="community--icon"
+        v-if="community.icon_url"
+        :src="community.icon_url"
+        :alt="community.name"
+      />
+      <div v-else class="community--icon">
+        <span>CG</span>
+      </div>
+    </div>
+
+    <div class="community--seperator"></div>
+
+    <div class="community--icon">
+      <span>
+        <i class="fa fa-plus"></i>
+      </span>
+    </div>
+
+    <slot />
   </div>
 </template>
 
 <script>
-import { useActions } from '@u3u/vue-hooks'
-
 export default {
   name: 'CommunitiesList',
-  setup() {
-    const { logout } = useActions('auth', ['logout'])
-
-    return {
-      logout
-    }
-  }
-}
+  props: ['communities'],
+};
 </script>
 
 <style lang="scss" scoped>
@@ -65,7 +65,7 @@ export default {
   transition: all 0.2s ease-in-out;
   &.active {
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       width: 13px;
@@ -88,24 +88,5 @@ export default {
   background: $icon-gray;
   margin-bottom: 10px;
   border-radius: 2px;
-}
-
-.signout--button {
-  background: none;
-  color: white;
-  outline: none;
-  border: none;
-  margin-top: auto;
-  margin-bottom: 5px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  &:hover {
-    background: $background-light;
-  }
 }
 </style>

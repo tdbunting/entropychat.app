@@ -7,21 +7,17 @@
 </template>
 
 <script>
-import { useActions } from '@u3u/vue-hooks'
-import Button from '@/components/Button.vue'
+import { useActions } from '@u3u/vue-hooks';
 
 export default {
-  components: {
-    Button
-  },
   setup() {
-    const { logout } = useActions('auth', ['logout'])
+    const { logout } = useActions('auth', ['logout']);
 
     return {
-      logout
-    }
-  }
-}
+      logout,
+    };
+  },
+};
 </script>
 
 <style lang="scss">

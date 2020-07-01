@@ -15,8 +15,8 @@
 
 <script>
 export default {
-  props: ['message']
-}
+  props: ['message'],
+};
 </script>
 
 <style lang="scss">

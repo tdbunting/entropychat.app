@@ -37,8 +37,8 @@
 
 <script>
 export default {
-  name: 'ChannelsListItem'
-}
+  name: 'ChannelsListItem',
+};
 </script>
 
 <style lang="scss" scoped>

@@ -5,8 +5,8 @@ module.exports = {
       sass: {
         prependData: `
             @import "@/styles/abstracts/_variables.scss";
-          `
-      }
-    }
-  }
+          `,
+      },
+    },
+  },
 };

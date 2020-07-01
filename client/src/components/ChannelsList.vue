@@ -21,16 +21,16 @@
 </template>
 
 <script>
-import ChannelsListItem from '@/components/ChannelsListItem.vue'
-import ChannelsListUserArea from '@/components/ChannelsListUserArea.vue'
+import ChannelsListItem from '@/components/ChannelsListItem.vue';
+import ChannelsListUserArea from '@/components/ChannelsListUserArea.vue';
 
 export default {
   name: 'ChannelsList',
   components: {
     ChannelsListItem,
-    ChannelsListUserArea
-  }
-}
+    ChannelsListUserArea,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

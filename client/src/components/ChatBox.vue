@@ -9,28 +9,28 @@
 </template>
 
 <script>
-import { ref } from '@vue/composition-api'
-import { useState, useActions } from '@u3u/vue-hooks'
+import { ref } from '@vue/composition-api';
+import { useActions } from '@u3u/vue-hooks';
 
 export default {
   setup() {
-    const message = ref('')
+    const message = ref('');
 
-    const { createMessage } = useActions('messages', ['createMessage'])
+    const { createMessage } = useActions('messages', ['createMessage']);
 
     const sendMessage = () => {
       createMessage({
-        text: message.value
-      })
-      message.value = ''
-    }
+        text: message.value,
+      });
+      message.value = '';
+    };
 
     return {
       sendMessage,
-      message
-    }
-  }
-}
+      message,
+    };
+  },
+};
 </script>
 
 <style lang="scss">

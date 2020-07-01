@@ -26,14 +26,15 @@
 </template>
 
 <script>
-import { useState, useActions } from '@u3u/vue-hooks'
+import { useState } from '@u3u/vue-hooks';
+
 export default {
   setup() {
-    const { user } = useState('auth', ['user'])
+    const { user } = useState('auth', ['user']);
 
-    return { user }
-  }
-}
+    return { user };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
