@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
-import Messages from '../views/Messages.vue';
-import Main from '../views/Main.vue';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+import Messages from '../views/Messages.vue'
+import Main from '../views/Main.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
@@ -13,20 +13,20 @@ const routes = [
     component: Home,
   },
   {
-    path: '/m',
+    path: '/messages',
     name: 'Messages',
     component: Messages,
   },
   {
     // Added for temporary place to work on the ui
-    path: '/messages',
+    path: '/main',
     name: 'Main',
     component: Main,
   },
-];
+]
 
 const router = new VueRouter({
   routes,
-});
+})
 
-export default router;
+export default router
