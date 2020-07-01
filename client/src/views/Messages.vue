@@ -48,6 +48,15 @@ export default {
       messages,
     };
   },
+  mounted() {
+    this.scrollToEnd()
+  },
+  methods: {
+    scrollToEnd() {
+      var messagesContainer = this.$el.querySelector('.messages__main')
+      messagesContainer.scrollTop = messagesContainer.scrollHeight
+    }
+  }
 };
 </script>
 

@@ -12,15 +12,7 @@
       <ChannelsList />
 
       <!-- Chat for specified channel in specified community -->
-      <div class="channel--content">
-        <!-- Change to Channel Chat Navbar -->
-        <Navbar />
-
-        <div class="messages">
-          <Message v-for="message in messages" :key="message._id" :message="message" />
-        </div>
-        <ChatBox />
-      </div>
+      <Messages /> 
     </div>
   </div>
 </template>
@@ -29,9 +21,8 @@
 // IMPLEMENTED JUST LIKE MESSAGES VIEW
 import { watch } from '@vue/composition-api';
 import { useState, useActions, useRouter } from '@u3u/vue-hooks';
-import Navbar from '@/components/Navbar.vue';
 import ChatBox from '@/components/ChatBox.vue';
-import Message from '@/components/Message.vue';
+import Messages from '@/views/Messages.vue'
 import CommunitiesList from '@/components/CommunitiesList.vue';
 import ChannelsList from '@/components/ChannelsList.vue';
 
@@ -39,8 +30,7 @@ export default {
   components: {
     CommunitiesList,
     ChannelsList,
-    Navbar,
-    Message,
+    Messages,
     ChatBox,
   },
   setup() {
@@ -49,11 +39,7 @@ export default {
     const { user } = useState('auth', ['user']);
     const { communities } = useState('communities', ['communities']);
 
-    const { loading, messages } = useState('messages', ['messages', 'loading']);
-
     const { logout } = useActions('auth', ['logout']);
-
-    const { listen } = useActions('messages', ['listen']);
 
     const { getCommunities } = useActions('communities', ['getCommunities']);
 
@@ -65,13 +51,9 @@ export default {
       }
     });
 
-    listen();
-
     return {
       user,
       logout,
-      loading,
-      messages,
       communities,
     };
   },
