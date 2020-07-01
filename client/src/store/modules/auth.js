@@ -1,6 +1,6 @@
 import feathers from '../../feathers';
 
-const loading = () => new Promise((resolve) => setTimeout(resolve, 5000));
+const loading = () => new Promise((resolve) => setTimeout(resolve, 1500));
 
 export default {
   namespaced: true,
