@@ -59,19 +59,19 @@ export default {
         channels: [
           {
             id: 105,
-            name: 'Bomb 1'
+            name: 'Custom 1'
           },
           {
             id: 106,
-            name: 'Bomb 2'
+            name: 'Custom 2'
           },
           {
             id: 107,
-            name: 'Bomb 3'
+            name: 'Custom 3'
           },
           {
             id: 108,
-            name: 'Bomb 4'
+            name: 'Custom 4'
           },
         ]
       }
