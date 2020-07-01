@@ -1,7 +1,7 @@
 <template>
   <div class="communities">
     <div class="community--icon">
-      <span>CG</span>
+      <span><i class="fa fa-home"></i></span>
     </div>
     <div class="community--seperator"></div>
     <div class="community--icon">
@@ -15,7 +15,7 @@
     </div>
     <div class="community--seperator"></div>
     <div class="community--icon">
-      <span>CG</span>
+      <span><i class="fa fa-plus"></i></span>
     </div>
 
     <button class="signout--button" @click="logout()">
