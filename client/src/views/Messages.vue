@@ -1,20 +1,16 @@
 <template>
   <div class="messages">
-    <Navbar></Navbar>
-    <main class="messages__main">
-      <div>
-        <Message v-for="message in messages" :key="message._id" :message="message" />
-      </div>
-      <ChatBox class="messages__main--bottom" />
-    </main>
+    <Navbar />
+    <div class="messages__main scrollable">
+      <Message v-for="message in messages" :key="message._id" :message="message" />
+    </div>
+    <ChatBox />
   </div>
 </template>
 
 <script>
 import { watch } from '@vue/composition-api';
 import { useState, useActions, useRouter } from '@u3u/vue-hooks';
-// import Button from '@/components/Button.vue';
-// import Loading from '@/components/Loading.vue';
 import Navbar from '@/components/Navbar.vue';
 import ChatBox from '@/components/ChatBox.vue';
 import Message from '@/components/Message.vue';
@@ -56,12 +52,12 @@ export default {
 </script>
 
 <style lang="scss">
-.messages {
+.messages{
   display: flex;
-  width: 100%;
   height: 100%;
+  width: 100%;
   flex-direction: column;
-  background: $bg;
+  background: $background-light;
 }
 
 .messages__main {
@@ -69,8 +65,38 @@ export default {
   position: relative;
 }
 
-.messages__main--bottom {
-  position: absolute;
-  bottom: 0px;
+.scrollable {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: $bg-dark;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $primary;
+  }
+
+  &::before {
+    content: '';
+    width: 100vw;
+    height: 1rem;
+    background: linear-gradient($bg 1%, rgba(1,1,1,0));
+    top: 0px;
+  }
+
+  &::after {
+    content: '';
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(rgba(1,1,1,0) 80%, $bg);
+    bottom: 0px;
+  }
 }
+
 </style>
