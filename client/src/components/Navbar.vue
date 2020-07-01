@@ -2,7 +2,7 @@
   <nav class="navbar">
     <h3><i class="fa fa-circle"></i>Channel Name</h3>
     <input type="text" class="search--input" placeholder="Search..." />
-    <Button @click.native="logout()">Log Out</Button>
+    <!-- <Button @click.native="logout()">Log Out</Button> MOVED TO COMMUNITIES LIST FOR NOW -->
   </nav>
 </template>
 

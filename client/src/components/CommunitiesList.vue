@@ -17,12 +17,25 @@
     <div class="community--icon">
       <span>CG</span>
     </div>
+
+    <button class="signout--button" @click="logout()">
+      <i class="fa fa-sign-out"></i>
+    </button>
   </div>
 </template>
 
 <script>
+import { useActions } from '@u3u/vue-hooks'
+
 export default {
-  name: 'CommunitiesList'
+  name: 'CommunitiesList',
+  setup() {
+    const { logout } = useActions('auth', ['logout'])
+
+    return {
+      logout
+    }
+  }
 }
 </script>
 
@@ -75,5 +88,24 @@ export default {
   background: $icon-gray;
   margin-bottom: 10px;
   border-radius: 2px;
+}
+
+.signout--button {
+  background: none;
+  color: white;
+  outline: none;
+  border: none;
+  margin-top: auto;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background: $background-light;
+  }
 }
 </style>
