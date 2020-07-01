@@ -1,35 +1,20 @@
 <template>
   <div class="channels--list-item">
     <div class="channels--list-header">
-      <h4>Channel List Header</h4>
+      <h4>{{channelListGroup.name}}</h4>
       <span>
         <i class="fa fa-plus"></i>
       </span>
     </div>
     <div class="channels--list-content">
-      <div class="channels--list-content-item">
+      <div 
+        v-for="channel in channelListGroup.channels"
+        :key="channel.id"
+        class="channels--list-content-item">
         <span>
           <i class="fa fa-circle"></i>
         </span>
-        <p>General</p>
-      </div>
-      <div class="channels--list-content-item">
-        <span>
-          <i class="fa fa-circle"></i>
-        </span>
-        <p>General</p>
-      </div>
-      <div class="channels--list-content-item">
-        <span>
-          <i class="fa fa-circle"></i>
-        </span>
-        <p>General</p>
-      </div>
-      <div class="channels--list-content-item">
-        <span>
-          <i class="fa fa-circle"></i>
-        </span>
-        <p>General</p>
+        <p>{{channel.name}}</p>
       </div>
     </div>
   </div>
@@ -38,6 +23,7 @@
 <script>
 export default {
   name: 'ChannelsListItem',
+  props: ['channelListGroup'],
 };
 </script>
 

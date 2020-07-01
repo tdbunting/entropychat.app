@@ -11,8 +11,7 @@
 
     <!-- CHANNELS LIST -->
     <div class="channels--list">
-      <ChannelsListItem />
-      <ChannelsListItem />
+      <ChannelsListItem v-for="group in channelGroups" :key="group.id" :channelListGroup="group" />
     </div>
 
     <!-- USER AREA IN CHANNEL LIST -->
@@ -30,6 +29,55 @@ export default {
     ChannelsListItem,
     ChannelsListUserArea,
   },
+  setup(){
+    const channelGroups = [
+      {
+        id: 1,
+        name: 'Default Channel Group',
+        channels: [
+          {
+            id: 101,
+            name: 'General 1'
+          },
+          {
+            id: 102,
+            name: 'General 2'
+          },
+          {
+            id: 103,
+            name: 'General 3'
+          },
+          {
+            id: 104,
+            name: 'General 4'
+          },
+        ]
+      },
+      {
+        id: 2,
+        name: 'Channel Group 2',
+        channels: [
+          {
+            id: 105,
+            name: 'Bomb 1'
+          },
+          {
+            id: 106,
+            name: 'Bomb 2'
+          },
+          {
+            id: 107,
+            name: 'Bomb 3'
+          },
+          {
+            id: 108,
+            name: 'Bomb 4'
+          },
+        ]
+      }
+    ]
+    return { channelGroups }
+  }
 };
 </script>
 
