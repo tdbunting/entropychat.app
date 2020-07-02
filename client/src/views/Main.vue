@@ -3,7 +3,7 @@
     <CommunitiesList :communities="communities">
       <!-- This button appears as last element in communities list -->
       <button @click="logout()" class="signout--button">
-        <i class="fa fa-sign-out"></i>
+        <i class="icon-sign-out"></i>
       </button>
     </CommunitiesList>
 

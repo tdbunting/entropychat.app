@@ -2,7 +2,7 @@
   <div class="communities">
     <div class="community--icon">
       <span>
-        <i class="fa fa-home"></i>
+        <i class="icon-home"></i>
       </span>
     </div>
 
@@ -24,7 +24,7 @@
 
     <div class="community--icon">
       <span>
-        <i class="fa fa-plus"></i>
+        <i class="icon-add"></i>
       </span>
     </div>
 

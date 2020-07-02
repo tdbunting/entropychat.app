@@ -3,7 +3,7 @@
     <div class="channels--list-header">
       <h4>{{channelListGroup.name}}</h4>
       <span>
-        <i class="fa fa-plus"></i>
+        <i class="icon-add"></i>
       </span>
     </div>
     <div class="channels--list-content">
@@ -12,7 +12,7 @@
         :key="channel.id"
         class="channels--list-content-item">
         <span>
-          <i class="fa fa-circle"></i>
+          <i class="icon-hashtag"></i>
         </span>
         <p>{{channel.name}}</p>
       </div>

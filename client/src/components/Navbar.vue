@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <h3><i class="fa fa-circle"></i>Channel Name</h3>
+    <h3><i class="icon-hashtag"></i>Channel Name</h3>
     <input type="text" class="search--input" placeholder="Search..." />
     <!-- <Button @click.native="logout()">Log Out</Button> MOVED TO COMMUNITIES LIST FOR NOW -->
   </nav>
@@ -31,7 +31,7 @@ nav {
   align-items: center;
 
   .search--input {
-    background: $background-mid;
+    background: $nav-dark;
     border: 0;
     border-radius: 100px;
     padding: 10px;

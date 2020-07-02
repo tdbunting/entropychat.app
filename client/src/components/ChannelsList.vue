@@ -1,11 +1,9 @@
 <template>
   <div class="channels">
-    <!-- Change to Server Channels Navbar -->
     <nav>
       <h3>Community Name</h3>
-      <!-- ICON FOR COMMUNITY SETTINGS -->
       <span>
-        <i class="fa fa-cog" />
+        <i class="icon-menu-dots" />
       </span>
     </nav>
 
@@ -30,6 +28,8 @@ export default {
     ChannelsListUserArea,
   },
   setup(){
+    // This is just an example of how the data COULD look coming in from API,
+    // will need alterations once the service is created
     const channelGroups = [
       {
         id: 1,
@@ -91,7 +91,7 @@ export default {
   flex-direction: column;
   nav {
     color: white;
-    background: #38333f;
+    background: $nav-light;
     display: flex;
     justify-content: space-between;
     align-items: center;

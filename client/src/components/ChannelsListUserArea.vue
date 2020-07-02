@@ -13,13 +13,13 @@
     </div>
     <div class="icons">
       <span>
-        <i class="fa fa-microphone" />
+        <i class="icon-mic"></i>
       </span>
       <span>
-        <i class="fa fa-headphones" />
+        <i class="icon-headphones" />
       </span>
       <span>
-        <i class="fa fa-cog" />
+        <i class="icon-settings"></i>
       </span>
     </div>
   </div>
@@ -74,7 +74,6 @@ export default {
   }
 
   .icons {
-    margin-left: 5px;
     display: flex;
     flex-direction: row;
     span {
