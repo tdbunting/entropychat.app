@@ -36,42 +36,54 @@ export default {
         name: 'Default Channel Group',
         channels: [
           {
+            id: 100,
+            name: '👋welcome'
+          },
+          {
             id: 101,
-            name: 'General 1'
+            name: '🗣introductions'
           },
           {
             id: 102,
-            name: 'General 2'
+            name: '🎁giveaway'
           },
           {
             id: 103,
-            name: 'General 3'
+            name: '🎨share work'
           },
           {
             id: 104,
-            name: 'General 4'
+            name: '📖share resources'
           },
         ]
       },
       {
         id: 2,
-        name: 'Channel Group 2',
+        name: 'Discussion',
         channels: [
           {
             id: 105,
-            name: 'Custom 1'
+            name: '💬general'
           },
           {
             id: 106,
-            name: 'Custom 2'
+            name: '👬find a pair'
           },
           {
             id: 107,
-            name: 'Custom 3'
+            name: '💭stream suggestions'
           },
           {
             id: 108,
-            name: 'Custom 4'
+            name: '💡ideas'
+          },
+          {
+            id: 109,
+            name: '🌻community contributions'
+          },
+          {
+            id: 110,
+            name: '🌱community-app'
           },
         ]
       }
