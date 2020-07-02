@@ -25,6 +25,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Icon Sizes - may be useful to change these to relative units */
+.icon-s {
+  font-size: 15px;
+}
+
+.icon-m {
+  font-size: 30px;
+}
+
+.icon-l {
+  font-size: 45px;
+}
+
+.icon-xl {
+  font-size: 60px;
+}
+
+.icon-xxl {
+  font-size: 120px;
+}
+
 .icon-sign-out:before {
   content: "\e91d";
 }
