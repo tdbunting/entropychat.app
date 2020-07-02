@@ -1,7 +1,13 @@
 <template>
   <nav class="navbar">
-    <h3><i class="icon-hashtag"></i>Channel Name</h3>
-    <input type="text" class="search--input" placeholder="Search..." />
+    <h3><i class="icon-hashtag"></i>Channel Name</h3>    
+    <div>
+      <i class="icon-notification mr-1"></i>
+      <i class="icon-group mr-1"></i>
+      <i class="icon-search mr-1"></i>
+    
+      <input type="text" class="search--input" placeholder="Search..." />
+    </div>
     <!-- <Button @click.native="logout()">Log Out</Button> MOVED TO COMMUNITIES LIST FOR NOW -->
   </nav>
 </template>
