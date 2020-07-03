@@ -37,13 +37,39 @@ export default {
     const { router } = useRouter();
 
     const { user } = useState('auth', ['user']);
-    const { communities } = useState('communities', ['communities']);
+    
+    const communities = [
+      {
+            "_id": "5efbe0a0435ac500769bcd74",
+            "public": false,
+            "name": "Coding Garden",
+            "icon_url": "https://static-cdn.jtvnw.net/jtv_user_pictures/611cac54-34e0-4c2a-851b-66e5ea2b3f81-profile_image-300x300.png",
+            "owner_id": "5efb7d31e6fbc9008cc235a5",
+        },
+        {
+            "_id": "5efbe0f4435ac500769bcd75",
+            "public": false,
+            "name": "Smile Bot",
+            "icon_url": "https://cdn.pixabay.com/photo/2016/09/01/08/24/smiley-1635449_1280.png",
+            "owner_id": "5efb7d31e6fbc9008cc235a5",
+        },
+        {
+            "_id": "5efbe10d435ac500769bcd76",
+            "public": false,
+            "name": "Friendsly",
+            "icon_url": "https://cdn.pixabay.com/photo/2016/04/01/12/11/avatar-1300582_1280.png",
+            "owner_id": "5efb7d31e6fbc9008cc235a5",
+        },
+        {
+            "_id": "5efbe12b435ac500769bcd77",
+            "public": false,
+            "name": "Pandas",
+            "icon_url": "https://cdn.pixabay.com/photo/2017/10/17/05/17/panda-2859555_1280.jpg",
+            "owner_id": "5efb7d31e6fbc9008cc235a5",
+        }
+    ]
 
     const { logout } = useActions('auth', ['logout']);
-
-    const { getCommunities } = useActions('communities', ['getCommunities']);
-
-    getCommunities();
 
     watch(user, () => {
       if (!user.value) {
